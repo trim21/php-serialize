@@ -22,7 +22,6 @@ class User implements Serializable {
   }
 
   unserialize(rawData) {
-    console.trace()
     const { name, age } = JSON.parse(rawData)
     this.name = name
     this.age = age
@@ -50,17 +49,14 @@ serialize(new Map([[1, 'q']]))
 export function serialize(
   item: any,
   phpToJsScope: Object = {},
-  options: { encoding: 'utf8' | 'binary' } = { encoding: 'utf8' }
+  options: { encoding: 'utf8' | 'binary' } = { encoding: 'utf8' },
 ): string
 export function unserialize(
   item: string,
   scope: Object = {},
-  options: { strict: boolean, encoding: 'utf8' | 'binary' } = { strict: false, encoding: 'utf8' }
+  options: { strict: boolean; encoding: 'utf8' | 'binary' } = { strict: false, encoding: 'utf8' },
 ): any
-export function isSerialized(
-  item: any,
-  strict: false
-): boolean
+export function isSerialized(item: any, strict: false): boolean
 ```
 
 #### License

@@ -5,7 +5,7 @@ import isSerialized from './isSerialized'
 export { serialize, unserialize, isSerialized }
 
 export interface Serializable {
-  serialize(): string;
+  serialize: () => string
 
-  unserialize(rawData: string): unknown
+  unserialize: (rawData: string) => unknown
 }
