@@ -14,7 +14,7 @@ function getClassReference(className: string, scope: Record<string, any>, strict
   }
 
   if (classReference) {
-    container = new (getClass(classReference.prototype))()
+    container = classReference
   } else {
     container = getIncompleteClass(className)
   }
@@ -69,8 +69,17 @@ function unserializeItem(parser: Parser, scope: Record<string, any>, options: Op
   if (type === 'notserializable-class') {
     const name = parser.getByLength('"', '"', (length) => parser.readAhead(length))
     parser.seekExpected(':')
+
+    const cls = getClassReference(name, scope, options.strict)
+
+    if (typeof cls.unserialize === 'function') {
+      const payload = parser.getByLength('{', '}', (length) => parser.readAhead(length))
+      return cls.unserialize(payload)
+    }
+
+    const result = cls instanceof __PHP_Incomplete_Class ? cls : new (getClass(cls.prototype))()
+
     const pairs = parser.getByLength('{', '}', (length) => unserializePairs(parser, length, scope, options))
-    const result = getClassReference(name, scope, options.strict)
 
     const PREFIX_PRIVATE = `\u0000${name}\u0000`
     const PREFIX_PROTECTED = '\u0000*\u0000'
@@ -97,7 +106,7 @@ function unserializeItem(parser: Parser, scope: Record<string, any>, options: Op
         throw new Error(`unserialize not found on class when processing '${name}'`)
       }
 
-      result.unserialize(payload)
+      return result.unserialize(payload)
     }
     return result
   }
