@@ -14,7 +14,7 @@
     "build": "tsc"
   },
   "repository": "trim21/php-serialize",
-  "author": "steelbrain",
+  "author": "trim21",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/trim21/php-serialize/issues"
