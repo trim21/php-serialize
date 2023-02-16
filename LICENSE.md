@@ -1,6 +1,7 @@
 The MIT License (MIT)
 
 Copyright (c) 2022-2023 trim21 <trim21.me@gmail.com>
+
 Copyright (c) 2015 Steel Brain
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
