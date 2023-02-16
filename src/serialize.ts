@@ -19,15 +19,19 @@ export default function serialize(
   scope: Record<string, any> = {},
   givenOptions: { encoding?: BufferEncoding } = {},
 ): string {
+  if (item === null) {
+    return 'N;'
+  }
+  if (item === undefined) {
+    return 'N;'
+  }
+
   const type = typeof item
   const options: any = { ...givenOptions }
   if (typeof options.encoding === 'undefined') {
     options.encoding = 'utf8'
   }
 
-  if (item === null) {
-    return 'N;'
-  }
   if (type === 'number') {
     if (isInteger(item)) {
       return `i:${item};`
@@ -40,6 +44,7 @@ export default function serialize(
   if (type === 'boolean') {
     return `b:${item ? '1' : '0'};`
   }
+
   if (type !== 'object') {
     throw new TypeError(`Unexpected type '${type}' encountered while attempting to serialize`)
   }
