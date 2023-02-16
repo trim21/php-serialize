@@ -93,7 +93,7 @@ function unserializeItem(parser: Parser, scope: Record<string, any>, options: Op
     const payload = parser.getByLength('{', '}', (length) => parser.readAhead(length))
     const result = getClassReference(name, scope, options.strict)
     if (!(result instanceof __PHP_Incomplete_Class)) {
-      if (!result.unserialize) {
+      if (typeof result.unserialize !== 'function') {
         throw new Error(`unserialize not found on class when processing '${name}'`)
       }
 

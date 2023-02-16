@@ -4,23 +4,31 @@ serialize and unserialize php encoded string to or from js Object/Array/Map.
 
 It also supports `Serializable` objects decode. Here's how you can use them.
 
-```js
+```typescript
+import type { Serializable } from '@trim21/php-serialize'
 import { serialize, unserialize } from '@trim21/php-serialize'
 
-class User {
+class User implements Serializable {
+  private name: string
+  private age: number
+
   constructor({ name, age }) {
     this.name = name
     this.age = age
   }
+
   serialize() {
     return JSON.stringify({ name: this.name, age: this.age })
   }
+
   unserialize(rawData) {
+    console.trace()
     const { name, age } = JSON.parse(rawData)
     this.name = name
     this.age = age
   }
 }
+
 const steel = new User({ name: 'Steel Brain', age: 17 })
 const serialized = serialize(steel)
 const unserialized = unserialize(serialized, { User: User }) // Passing available classes
@@ -38,7 +46,7 @@ serialize(new Map([[1, 'q']]))
 
 #### API
 
-```js
+```ts
 export function serialize(
   item: any,
   phpToJsScope: Object = {},
