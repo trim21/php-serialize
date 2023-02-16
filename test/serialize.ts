@@ -5,6 +5,7 @@ import { serialize } from '../src/index'
 function serializeForTests() {
   const items = []
   function debug(item, scope = {}) {
+    // @ts-ignore
     items.push(serialize(item, scope))
   }
 
@@ -47,7 +48,9 @@ function serializeForTests() {
   debug(
     (() => {
       const arr = []
+      // @ts-ignore
       arr[0] = 'shallow'
+      // @ts-ignore
       arr[4] = 'array'
       return arr
     })(),

@@ -1,10 +1,12 @@
 import * as path from 'path'
 import * as fs from 'fs'
-
+import * as url from 'url'
 import { test, expect } from '@jest/globals'
 
 import serializeForTests from './serialize'
 import serialize from '../src/serialize'
+
+const __dirname = url.fileURLToPath(new url.URL('.', import.meta.url))
 
 test('serialize compat with php', async () => {
   const givenOutput: string = await new Promise((resolve, reject) => {
