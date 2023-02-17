@@ -8,7 +8,7 @@ It also supports `Serializable` objects decode. Here's how you can use them.
 import type { Serializable } from '@trim21/php-serialize'
 import { serialize, unserialize } from '@trim21/php-serialize'
 
-class User implements Serializable {
+class User {
   private name: string
   private age: number
 
@@ -21,7 +21,7 @@ class User implements Serializable {
     return JSON.stringify({ name: this.name, age: this.age })
   }
 
-  unserialize(rawData) {
+  static unserialize(rawData: string): User {
     const { name, age } = JSON.parse(rawData)
     this.name = name
     this.age = age
