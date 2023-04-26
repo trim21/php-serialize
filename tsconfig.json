@@ -6,7 +6,6 @@
     "strictNullChecks": true,
     "moduleResolution": "node",
     "target": "ESNext",
-    "allowImportingTsExtensions": true,
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,

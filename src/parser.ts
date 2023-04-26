@@ -1,4 +1,4 @@
-import type { Options } from './parse.ts'
+import type { Options } from './parse'
 
 export type ParserType = 'null' | 'int' | 'float' | 'boolean' | 'string' | 'array-object' | 'serializable-class' | 'object'
 
