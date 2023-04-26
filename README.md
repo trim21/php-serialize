@@ -20,12 +20,20 @@ class User {
 }
 
 php.stringify({
+  b: true,
+
   a: [1, 2, 3, 'a', 100n, null, undefined],
-  b: { [php.ObjectName]: 'ObjectName' },
+
+  s: 'str',
+
   m: new Map([
     [1, 2],
     [2, 'b'],
   ]),
+
+  withObjectName: {
+    [php.ObjectName]: 'O',
+  },
 })
 
 const steel = new User({ name: 'Steel Brain', age: 17 })
