@@ -1,5 +1,8 @@
 # PHP-Serialize
 
+[![](https://img.shields.io/npm/v/@trim21/php-serialize)](https://www.npmjs.com/package/@trim21/php-serialize)
+![Codecov](https://img.shields.io/codecov/c/github/trim21/php-serialize)
+
 serialize and deserialize php encoded string to/from js Object/Array/Map.
 
 ```typescript
