@@ -1,6 +1,6 @@
 # PHP-Serialize
 
-serialize and unserialize php encoded string to or from js Object/Array/Map.
+serialize and deserialize php encoded string to/from js Object/Array/Map.
 
 It also supports `Serializable` objects decode. Here's how you can use them.
 
