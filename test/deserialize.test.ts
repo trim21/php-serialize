@@ -108,13 +108,41 @@ test('should return to parse class with strict mode off', () => {
 })
 
 test('deserialize key pairs correctly, not serialized by self', () => {
-  expect(parse(`a:1:{s:12:"97YEAY3JO237";s:2:"hi"}`)).toMatchSnapshot()
-  expect(parse(`a:1:{s:12:"02YJXTVI6ZOJ";s:2:"hi"}`)).toMatchSnapshot()
-  expect(parse(`a:1:{s:12:"X0YJXTVI6ZOJ";s:2:"hi"}`)).toMatchSnapshot()
-  expect(parse(`a:1:{s:2:"X0";s:2:"hi"}`)).toMatchSnapshot()
-  expect(parse(`a:1:{s:12:"0XYJXTVI6ZOJ";s:2:"hi"}`)).toMatchSnapshot()
-  expect(parse(`a:1:{s:2:"0x";s:2:"hi"}`)).toMatchSnapshot()
-  expect(parse(`a:1:{s:2:"0N";s:2:"hi"}`)).toMatchSnapshot()
+  expect(parse(`a:1:{s:12:"97YEAY3JO237";s:2:"hi"}`)).toMatchInlineSnapshot(`
+    {
+      "97YEAY3JO237": "hi",
+    }
+  `)
+  expect(parse(`a:1:{s:12:"02YJXTVI6ZOJ";s:2:"hi"}`)).toMatchInlineSnapshot(`
+    {
+      "02YJXTVI6ZOJ": "hi",
+    }
+  `)
+  expect(parse(`a:1:{s:12:"X0YJXTVI6ZOJ";s:2:"hi"}`)).toMatchInlineSnapshot(`
+    {
+      "X0YJXTVI6ZOJ": "hi",
+    }
+  `)
+  expect(parse(`a:1:{s:2:"X0";s:2:"hi"}`)).toMatchInlineSnapshot(`
+    {
+      "X0": "hi",
+    }
+  `)
+  expect(parse(`a:1:{s:12:"0XYJXTVI6ZOJ";s:2:"hi"}`)).toMatchInlineSnapshot(`
+    {
+      "0XYJXTVI6ZOJ": "hi",
+    }
+  `)
+  expect(parse(`a:1:{s:2:"0x";s:2:"hi"}`)).toMatchInlineSnapshot(`
+    {
+      "0x": "hi",
+    }
+  `)
+  expect(parse(`a:1:{s:2:"0N";s:2:"hi"}`)).toMatchInlineSnapshot(`
+    {
+      "0N": "hi",
+    }
+  `)
 })
 
 test('converts arrays with missing keys to objects', () => {
