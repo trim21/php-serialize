@@ -2,8 +2,6 @@
 
 serialize and deserialize php encoded string to/from js Object/Array/Map.
 
-It also supports `Serializable` objects decode. Here's how you can use them.
-
 ```typescript
 import * as php from '@trim21/php-serialize'
 
@@ -43,7 +41,7 @@ console.log(serialized)
 const deserialized = php.parse('...', { strict: false }) // won't parse serializable class with default strict=true
 ```
 
-#### API
+## API
 
 ```typescript
 export declare function parse(
@@ -62,6 +60,14 @@ export declare function stringify(item: string | Buffer): any
 export declare const ObjectName: unique symbol
 ```
 
-#### License
+## parse
+
+php serialized object `"O:1:"A":1:{...}"` will be parsed to object with symbol name `{ {php.ObjectName]: "A", ... }`
+
+## stringify
+
+js Object with symbol as object name `{ {php.ObjectName]: "A" }` will be serialized to php object `"O:1:"A":1:{...}"`
+
+## License
 
 This project is licensed under the terms of MIT License. See the License file for more info.
