@@ -30,8 +30,8 @@ class User {
 
 const steel = new User({ name: 'Steel Brain', age: 17 })
 const serialized = serialize(steel)
-const unserialized = unserialize(serialized, { User: User }) // Passing available classes
-console.log(unserialized instanceof User) // true
+const deserialized = unserialize(serialized, { User: User }) // Passing available classes
+console.log(deserialized instanceof User) // true
 
 const serializedForNamespace = serialize(steel, {
   'MyApp\\User': User,

@@ -1,14 +1,6 @@
-import type { Options } from './unserialize'
+import type { Options } from './parse.ts'
 
-export type ParserType =
-  | 'null'
-  | 'int'
-  | 'float'
-  | 'boolean'
-  | 'string'
-  | 'array-object'
-  | 'serializable-class'
-  | 'notserializable-class'
+export type ParserType = 'null' | 'int' | 'float' | 'boolean' | 'string' | 'array-object' | 'serializable-class' | 'object'
 
 const PARSER_TYPES: Record<string, ParserType> = {
   N: 'null',
@@ -18,13 +10,14 @@ const PARSER_TYPES: Record<string, ParserType> = {
   s: 'string',
   a: 'array-object',
   C: 'serializable-class',
-  O: 'notserializable-class',
+  O: 'object',
 }
 
-export default class Parser {
+export class Parser {
   index: number
   contents: Buffer
   options: Options
+
   constructor(contents: Buffer, index: number, options: Options) {
     this.contents = contents
     this.index = index

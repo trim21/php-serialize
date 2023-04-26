@@ -1,2 +1,3 @@
-export { unserialize as parse } from './unserialize'
-export { serialize as stringify } from './serialize'
+export { parse } from './parse'
+export { stringify } from './stringify'
+export { ObjectName } from './symbol'
