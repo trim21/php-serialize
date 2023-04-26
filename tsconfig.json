@@ -1,20 +1,20 @@
 {
   "compilerOptions": {
     "baseUrl": "./",
-    "module": "ES2022",
-    "esModuleInterop": true,
+    "module": "ESNext",
+    "strict": true,
     "strictNullChecks": true,
-    "resolveJsonModule": true,
     "moduleResolution": "node",
+    "target": "ESNext",
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
-    "downlevelIteration": true,
-    "outDir": "./lib",
-    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "outDir": "./dist/",
+    "declarationDir": "./dist/types",
     "skipLibCheck": true,
+    "emitDeclarationOnly": true,
     "lib": ["ES2022"]
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "public"]
+  "exclude": ["node_modules", "lib", "dist", "public"]
 }

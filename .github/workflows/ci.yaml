@@ -14,7 +14,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
       - name: Setup node
         uses: actions/setup-node@v3
         with:
@@ -23,18 +22,14 @@ jobs:
 
       - run: yarn
       - run: npx prettier --check ./
-      - run: npx tsc --noEmit --pretty
+      - run: npx tsc --pretty
       - run: yarn lint
-      - run: yarn build
 
   test:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
-        with:
-          submodules: recursive
-
       - name: Setup node
         uses: actions/setup-node@v3
         with:
@@ -47,3 +42,19 @@ jobs:
 
       - name: Upload Coverage to Codecov
         uses: codecov/codecov-action@v3
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: yarn
+
+      - run: yarn
+
+      - run: yarn build

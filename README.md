@@ -1,14 +1,15 @@
 # PHP-Serialize
 
-serialize and unserialize php encoded string to or from js Object/Array/Map.
+serialize and deserialize php encoded string to/from js Object/Array/Map.
 
 It also supports `Serializable` objects decode. Here's how you can use them.
 
 ```typescript
-import type { Serializable } from '@trim21/php-serialize'
-import { serialize, unserialize } from '@trim21/php-serialize'
+import * as php from '@trim21/php-serialize'
 
-class User implements Serializable {
+class User {
+  [php.ObjectName] = 'User'
+
   private name: string
   private age: number
 
@@ -16,47 +17,49 @@ class User implements Serializable {
     this.name = name
     this.age = age
   }
-
-  serialize() {
-    return JSON.stringify({ name: this.name, age: this.age })
-  }
-
-  unserialize(rawData) {
-    const { name, age } = JSON.parse(rawData)
-    this.name = name
-    this.age = age
-  }
 }
 
-const steel = new User({ name: 'Steel Brain', age: 17 })
-const serialized = serialize(steel)
-const unserialized = unserialize(serialized, { User: User }) // Passing available classes
-console.log(unserialized instanceof User) // true
+php.stringify({
+  b: true,
 
-const serializedForNamespace = serialize(steel, {
-  'MyApp\\User': User,
+  a: [1, 2, 3, 'a', 100n, null, undefined],
+
+  s: 'str',
+
+  m: new Map([
+    [1, 2],
+    [2, 'b'],
+  ]),
+
+  withObjectName: {
+    [php.ObjectName]: 'O',
+  },
 })
-// ^ Above code will serialize User class to given name
 
-// If you need to serialize to php array with int key
+const steel = new User({ name: 'Steel Brain', age: 17 })
+const serialized = php.stringify(steel)
+console.log(serialized)
 
-serialize(new Map([[1, 'q']]))
+const deserialized = php.parse('...', { strict: false }) // won't parse serializable class with default strict=true
 ```
 
 #### API
 
-```ts
-export function serialize(
+```typescript
+export declare function parse(
   item: any,
-  phpToJsScope: Object = {},
-  options: { encoding: 'utf8' | 'binary' } = { encoding: 'utf8' },
+  {
+    strict = true,
+    encoding = 'utf-8',
+  }: {
+    strict: boolean
+    encoding: 'utf-8' | 'binary'
+  } = {},
 ): string
-export function unserialize(
-  item: string,
-  scope: Object = {},
-  options: { strict: boolean; encoding: 'utf8' | 'binary' } = { strict: false, encoding: 'utf8' },
-): any
-export function isSerialized(item: any, strict: false): boolean
+
+export declare function stringify(item: string | Buffer): any
+
+export declare const ObjectName: unique symbol
 ```
 
 #### License
