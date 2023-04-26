@@ -2,7 +2,6 @@ const typescript = require('@rollup/plugin-typescript')
 
 const pkg = require('./package.json')
 
-
 module.exports = {
   input: './src/index.ts',
   plugins: [
