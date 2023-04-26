@@ -10,6 +10,7 @@
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
+    "esModuleInterop": true,
     "outDir": "./dist/",
     "declarationDir": "./dist/types",
     "skipLibCheck": true,
