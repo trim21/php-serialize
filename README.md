@@ -46,20 +46,20 @@ const deserialized = php.parse('...', { strict: false }) // won't parse serializ
 #### API
 
 ```typescript
-export function parse(
+export declare function parse(
   item: any,
   {
     strict = true,
-    encoding = 'utf=8',
+    encoding = 'utf-8',
   }: {
     strict: boolean
-    encoding: 'utf8' | 'binary'
+    encoding: 'utf-8' | 'binary'
   } = {},
 ): string
 
-export function stringify(item: string | Buffer): any
+export declare function stringify(item: string | Buffer): any
 
-export const ObjectName = Symbol()
+export declare const ObjectName: unique symbol
 ```
 
 #### License
