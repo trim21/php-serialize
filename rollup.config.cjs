@@ -17,5 +17,12 @@ module.exports = {
       sourcemap: true,
       sourcemapExcludeSources: false,
     },
+    // ES module (for bundlers) build.
+    {
+      format: 'cjs',
+      file: pkg.main,
+      sourcemap: true,
+      sourcemapExcludeSources: false,
+    },
   ],
 }
