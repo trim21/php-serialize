@@ -14,7 +14,7 @@ function serializeObject(item: any, scope: Record<string, any>): string {
   return `${length}:{${processed.join('')}}`
 }
 
-export default function serialize(
+export function serialize(
   item: any,
   scope: Record<string, any> = {},
   givenOptions: { encoding?: BufferEncoding } = {},

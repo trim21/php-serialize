@@ -113,7 +113,11 @@ function unserializeItem(parser: Parser, scope: Record<string, any>, options: Op
   throw new Error(`Invalid type '${type}' encounterd while unserializing`)
 }
 
-function unserialize(item: string | Buffer, scope: Record<string, any> = {}, givenOptions: Partial<Options> = {}): any {
+export function unserialize(
+  item: string | Buffer,
+  scope: Record<string, any> = {},
+  givenOptions: Partial<Options> = {},
+): any {
   const options: any = { ...givenOptions }
   if (typeof options.strict === 'undefined') {
     options.strict = true
@@ -124,5 +128,3 @@ function unserialize(item: string | Buffer, scope: Record<string, any> = {}, giv
   const parser = new Parser(Buffer.from(item), 0, options)
   return unserializeItem(parser, scope, options)
 }
-
-export default unserialize
