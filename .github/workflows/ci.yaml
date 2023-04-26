@@ -22,7 +22,7 @@ jobs:
 
       - run: yarn
       - run: npx prettier --check ./
-      - run: npx tsc --noEmit --pretty
+      - run: npx tsc --pretty
       - run: yarn lint
 
   test:
