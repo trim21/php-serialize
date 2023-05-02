@@ -5,6 +5,14 @@ import { ObjectName } from '../src/symbol'
 
 test('serialize map', () => {
   expect(stringify(new Map([[1, 'q']]))).toBe('a:1:{i:1;s:1:"q";}')
+  expect(
+    stringify(
+      new Map([
+        [1, 'q'],
+        [2, 's'],
+      ]),
+    ),
+  ).toBe('a:2:{i:1;s:1:"q";i:2;s:1:"s";}')
 })
 
 class Test {

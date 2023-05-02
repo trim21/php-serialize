@@ -51,9 +51,11 @@ export function stringify(item: any): string {
   }
 
   if (item instanceof Map) {
-    return `a:${item.size}:{${Array.from(item.entries()).map(([value, key]) => {
-      return `${stringify(value)}${stringify(key)}`
-    })}}`
+    return `a:${item.size}:{${Array.from(item.entries())
+      .map(([value, key]) => {
+        return `${stringify(value)}${stringify(key)}`
+      })
+      .join('')}}`
   }
 
   if (type === 'symbol') {
