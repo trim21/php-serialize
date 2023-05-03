@@ -5,6 +5,16 @@
 
 serialize and deserialize php encoded string to/from js Object/Array/Map.
 
+## Install
+
+```shell
+npm add @trim21/php-serialize
+yarn add @trim21/php-serialize
+pnpm add @trim21/php-serialize
+```
+
+## Example
+
 ```typescript
 import * as php from '@trim21/php-serialize'
 
