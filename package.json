@@ -10,9 +10,7 @@
     "test": "NODE_OPTIONS=\"--no-warnings --experimental-vm-modules\" jest",
     "lint": "eslint --ext ts .",
     "format": "prettier -w ./",
-    "prebuild": "rimraf dist",
     "build": "rollup -c",
-    "prepare": "husky install",
     "lint-staged": "lint-staged"
   },
   "repository": "trim21/php-serialize",
@@ -52,8 +50,8 @@
     "jest": "^29.5.0",
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
-    "rimraf": "^5.0.1",
     "rollup": "^3.23.0",
+    "rollup-plugin-delete": "^2.0.0",
     "ts-jest": "^29.1.0",
     "tsx": "^3.12.7",
     "typescript": "^5.0.4"
