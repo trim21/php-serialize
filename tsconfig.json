@@ -4,16 +4,14 @@
     "module": "ESNext",
     "strict": true,
     "strictNullChecks": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "target": "ESNext",
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
     "esModuleInterop": true,
-    "outDir": "./dist/",
-    "declarationDir": "./dist/types",
     "skipLibCheck": true,
-    "emitDeclarationOnly": true,
+    "noEmit": true,
     "lib": ["ES2022"]
   },
   "exclude": ["node_modules", "lib", "dist", "public"]

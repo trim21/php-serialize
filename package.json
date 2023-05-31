@@ -72,5 +72,53 @@
       "eslint --fix"
     ]
   },
-  "packageManager": "yarn@3.5.1"
+  "packageManager": "yarn@3.5.1",
+  "prettier": {
+    "semi": false,
+    "printWidth": 125,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "jest": {
+    "extensionsToTreatAsEsm": [
+      ".ts"
+    ],
+    "preset": "ts-jest/presets/default-esm",
+    "testEnvironment": "node",
+    "coverageProvider": "v8"
+  },
+  "eslintIgnore": [
+    "lib",
+    "node_modules",
+    "dist"
+  ],
+  "eslintConfig": {
+    "extends": [
+      "standard-with-typescript",
+      "prettier"
+    ],
+    "ignorePatterns": [
+      "*.test.ts",
+      "*.config.ts",
+      "**/test/**"
+    ],
+    "rules": {
+      "camelcase": "off",
+      "prettier/prettier": "off",
+      "no-underscore-dangle": "off",
+      "no-use-before-define": "off",
+      "import/extensions": "off",
+      "@typescript-eslint/no-use-before-define": "off",
+      "@typescript-eslint/no-inferrable-types": "off",
+      "@typescript-eslint/strict-boolean-expressions": "off",
+      "@typescript-eslint/restrict-template-expressions": "off",
+      "@typescript-eslint/prefer-nullish-coalescing": "off",
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/member-delimiter-style": "off"
+    },
+    "parserOptions": {
+      "sourceType": "module",
+      "project": "./tsconfig.json"
+    }
+  }
 }
