@@ -1111,6 +1111,7 @@ __metadata:
     rollup: ^3.28.1
     rollup-plugin-delete: ^2.0.0
     ts-jest: ^29.1.1
+    tslib: ^2.6.2
     tsx: ^3.12.7
     typescript: ^5.2.2
   languageName: unknown
@@ -5681,6 +5682,13 @@ __metadata:
     minimist: ^1.2.6
     strip-bom: ^3.0.0
   checksum: a6162eaa1aed680537f93621b82399c7856afd10ec299867b13a0675e981acac4e0ec00896860480efc59fc10fd0b16fdc928c0b885865b52be62cadac692447
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.6.2":
+  version: 2.6.2
+  resolution: "tslib@npm:2.6.2"
+  checksum: 329ea56123005922f39642318e3d1f0f8265d1e7fcb92c633e0809521da75eeaca28d2cf96d7248229deb40e5c19adf408259f4b9640afd20d13aecc1430f3ad
   languageName: node
   linkType: hard
 
