@@ -1158,7 +1158,7 @@ __metadata:
     rollup-plugin-delete: "npm:^2.0.0"
     ts-jest: "npm:^29.1.1"
     tslib: "npm:^2.6.2"
-    tsx: "npm:^3.14.0"
+    tsx: "npm:^4.6.1"
     typescript: "npm:^5.2.2"
   languageName: unknown
   linkType: soft
@@ -5503,16 +5503,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-support@npm:^0.5.21":
-  version: 0.5.21
-  resolution: "source-map-support@npm:0.5.21"
-  dependencies:
-    buffer-from: "npm:^1.0.0"
-    source-map: "npm:^0.6.0"
-  checksum: 9ee09942f415e0f721d6daad3917ec1516af746a8120bba7bb56278707a37f1eb8642bde456e98454b8a885023af81a16e646869975f06afc1a711fb90484e7d
-  languageName: node
-  linkType: hard
-
 "source-map@npm:^0.6.0, source-map@npm:^0.6.1":
   version: 0.6.1
   resolution: "source-map@npm:0.6.1"
@@ -5829,20 +5819,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsx@npm:^3.14.0":
-  version: 3.14.0
-  resolution: "tsx@npm:3.14.0"
+"tsx@npm:^4.6.1":
+  version: 4.6.1
+  resolution: "tsx@npm:4.6.1"
   dependencies:
     esbuild: "npm:~0.18.20"
     fsevents: "npm:~2.3.3"
     get-tsconfig: "npm:^4.7.2"
-    source-map-support: "npm:^0.5.21"
   dependenciesMeta:
     fsevents:
       optional: true
   bin:
     tsx: dist/cli.mjs
-  checksum: b6c938bdae9c656aef2aa0130ee6aa8f3487b5d411d5f7934b705c28ff44ab268db3dde123cf5237b4e5e2ab4441a0bad4b1a39e3ff2170d138538e44082f05d
+  checksum: 6c0291d7f3016d40fcd6b7014d77aef07c8051e19b480287381e5c5fb348aaf6dda2fa35b85ec2b9d1e83a45f9f6feb1992b5b630f8c06cc9dbdd8312ce39f41
   languageName: node
   linkType: hard
 
