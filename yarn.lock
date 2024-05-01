@@ -1187,7 +1187,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:^7.8.0"
     "@typescript-eslint/parser": "npm:^7.8.0"
     eslint: "npm:^8.57.0"
-    eslint-config-love: "npm:^44.0.0"
+    eslint-config-love: "npm:^47.0.0"
     eslint-config-prettier: "npm:^9.1.0"
     eslint-plugin-import: "npm:^2.29.1"
     eslint-plugin-n: "npm:^17.4.0"
@@ -2603,12 +2603,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-love@npm:^44.0.0":
-  version: 44.0.0
-  resolution: "eslint-config-love@npm:44.0.0"
+"eslint-config-love@npm:^47.0.0":
+  version: 47.0.0
+  resolution: "eslint-config-love@npm:47.0.0"
   dependencies:
     "@typescript-eslint/parser": "npm:^7.0.1"
-    eslint-config-standard: "npm:17.1.0"
   peerDependencies:
     "@typescript-eslint/eslint-plugin": ^7.0.1
     eslint: ^8.0.1
@@ -2616,7 +2615,7 @@ __metadata:
     eslint-plugin-n: "^15.0.0 || ^16.0.0 "
     eslint-plugin-promise: ^6.0.0
     typescript: "*"
-  checksum: 10c0/4ad413312d4e58861b52beb707e68c4cff5c024b2ebd8c97aba7c8aaccc353a69a100628573b569fef5f31e938b1e963fdf144d20b4a0fe4024fe4975c865ba7
+  checksum: 10c0/8726d03f50bc3b9fd69934a14b77d2d81bd7cd2795cb9c2c310e0056436d7f640961a9ad9366cb7bb93a8946dcfe1eb5b58e7cb1cbb73dabd7f104a00c0ddcd9
   languageName: node
   linkType: hard
 
@@ -2628,18 +2627,6 @@ __metadata:
   bin:
     eslint-config-prettier: bin/cli.js
   checksum: 10c0/6d332694b36bc9ac6fdb18d3ca2f6ac42afa2ad61f0493e89226950a7091e38981b66bac2b47ba39d15b73fff2cd32c78b850a9cf9eed9ca9a96bfb2f3a2f10d
-  languageName: node
-  linkType: hard
-
-"eslint-config-standard@npm:17.1.0":
-  version: 17.1.0
-  resolution: "eslint-config-standard@npm:17.1.0"
-  peerDependencies:
-    eslint: ^8.0.1
-    eslint-plugin-import: ^2.25.2
-    eslint-plugin-n: "^15.0.0 || ^16.0.0 "
-    eslint-plugin-promise: ^6.0.0
-  checksum: 10c0/d32f37ec4bea541debd3a8c9e05227673a9b1a9977da078195ee55fb371813ddf1349c75f2c33d76699fe3412f1e303181795f146e8d0e546b94fa0dce2bfbf9
   languageName: node
   linkType: hard
 
