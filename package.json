@@ -71,7 +71,7 @@
       "eslint --fix"
     ]
   },
-  "packageManager": "yarn@4.2.2",
+  "packageManager": "yarn@4.3.1",
   "prettier": {
     "semi": false,
     "printWidth": 125,
