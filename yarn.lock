@@ -1187,7 +1187,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:^7.18.0"
     "@typescript-eslint/parser": "npm:^7.18.0"
     eslint: "npm:^8.57.0"
-    eslint-config-love: "npm:^47.0.0"
+    eslint-config-love: "npm:^51.0.1"
     eslint-config-prettier: "npm:^9.1.0"
     eslint-plugin-import: "npm:^2.29.1"
     eslint-plugin-n: "npm:^17.10.1"
@@ -1343,7 +1343,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^7.18.0":
+"@typescript-eslint/eslint-plugin@npm:7.18.0, @typescript-eslint/eslint-plugin@npm:^7.18.0":
   version: 7.18.0
   resolution: "@typescript-eslint/eslint-plugin@npm:7.18.0"
   dependencies:
@@ -1366,7 +1366,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^7.0.1, @typescript-eslint/parser@npm:^7.18.0":
+"@typescript-eslint/parser@npm:7.18.0, @typescript-eslint/parser@npm:^7.18.0":
   version: 7.18.0
   resolution: "@typescript-eslint/parser@npm:7.18.0"
   dependencies:
@@ -2611,19 +2611,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-love@npm:^47.0.0":
-  version: 47.0.0
-  resolution: "eslint-config-love@npm:47.0.0"
+"eslint-config-love@npm:^51.0.1":
+  version: 51.0.1
+  resolution: "eslint-config-love@npm:51.0.1"
   dependencies:
-    "@typescript-eslint/parser": "npm:^7.0.1"
+    eslint-plugin-import: "npm:^2.25.2"
+    eslint-plugin-n: "npm:^17.0.0"
+    eslint-plugin-promise: "npm:^6.0.0"
+    typescript-eslint: "npm:^7.0.1"
   peerDependencies:
-    "@typescript-eslint/eslint-plugin": ^7.0.1
     eslint: ^8.0.1
-    eslint-plugin-import: ^2.25.2
-    eslint-plugin-n: "^15.0.0 || ^16.0.0 "
-    eslint-plugin-promise: ^6.0.0
     typescript: "*"
-  checksum: 10c0/8726d03f50bc3b9fd69934a14b77d2d81bd7cd2795cb9c2c310e0056436d7f640961a9ad9366cb7bb93a8946dcfe1eb5b58e7cb1cbb73dabd7f104a00c0ddcd9
+  checksum: 10c0/e05bfe98db92d5e1aacb77505fd48dc9999c9a32d04a56885bce0938a2b17c3a50164fab6e99db7d001857a7f7990bc4a50bba06c131a3ee8498fd42b16c3b4f
   languageName: node
   linkType: hard
 
@@ -2674,7 +2673,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-import@npm:^2.29.1":
+"eslint-plugin-import@npm:^2.25.2, eslint-plugin-import@npm:^2.29.1":
   version: 2.29.1
   resolution: "eslint-plugin-import@npm:2.29.1"
   dependencies:
@@ -2701,9 +2700,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-n@npm:^17.10.1":
-  version: 17.10.1
-  resolution: "eslint-plugin-n@npm:17.10.1"
+"eslint-plugin-n@npm:^17.0.0, eslint-plugin-n@npm:^17.10.1":
+  version: 17.10.2
+  resolution: "eslint-plugin-n@npm:17.10.2"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.4.0"
     enhanced-resolve: "npm:^5.17.0"
@@ -2715,7 +2714,16 @@ __metadata:
     semver: "npm:^7.5.3"
   peerDependencies:
     eslint: ">=8.23.0"
-  checksum: 10c0/c7538cb4f5ff60db8bb82187ecbb2a02931b708e4751a213cf565f430203e1b542d64670d736dd5dcc64afdf603bf9518ac7831d38da67f7cc1faab2870f4a72
+  checksum: 10c0/cd1e089a5243e923a0f79f688b69d27c8a6513deb7c4b2e687e8c476893e512f6a97ecf5ed595e489b583675002126065e3864c0102a606b857ec93c69f6da6a
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-promise@npm:^6.0.0":
+  version: 6.6.0
+  resolution: "eslint-plugin-promise@npm:6.6.0"
+  peerDependencies:
+    eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
+  checksum: 10c0/93a667dbc9ff15c4d586b0d40a31c7828314cbbb31b2b9a75802aa4ef536e9457bb3e1a89b384b07aa336dd61b315ae8b0aadc0870210378023dd018819b59b3
   languageName: node
   linkType: hard
 
@@ -6082,6 +6090,22 @@ __metadata:
     is-typed-array: "npm:^1.1.13"
     possible-typed-array-names: "npm:^1.0.0"
   checksum: 10c0/74253d7dc488eb28b6b2711cf31f5a9dcefc9c41b0681fd1c178ed0a1681b4468581a3626d39cd4df7aee3d3927ab62be06aa9ca74e5baf81827f61641445b77
+  languageName: node
+  linkType: hard
+
+"typescript-eslint@npm:^7.0.1":
+  version: 7.18.0
+  resolution: "typescript-eslint@npm:7.18.0"
+  dependencies:
+    "@typescript-eslint/eslint-plugin": "npm:7.18.0"
+    "@typescript-eslint/parser": "npm:7.18.0"
+    "@typescript-eslint/utils": "npm:7.18.0"
+  peerDependencies:
+    eslint: ^8.56.0
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 10c0/610c0faa70b9be89255086378c7ef69e979115c89be69851fb4d69e76907b3520450b162a8adee56b32dbf368f8c14c1fac88065539012140c1319851f2676da
   languageName: node
   linkType: hard
 
