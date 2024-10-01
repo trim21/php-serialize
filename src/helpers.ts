@@ -3,6 +3,6 @@ export function getByteLength(contents: string | Buffer): number {
 }
 
 // isInteger = is NOT a float but still a number
-export function isInteger(value: any): boolean {
+export function isInteger(value: unknown): boolean {
   return typeof value === 'number' && parseInt(value.toString(), 10) === value
 }

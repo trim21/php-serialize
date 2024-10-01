@@ -1,8 +1,6 @@
-/* eslint-disable max-classes-per-file, class-methods-use-this */
 import { expect, test } from '@jest/globals'
 
-import { stringify, parse } from '../src/'
-import { ObjectName } from '../src'
+import { stringify, parse, ObjectName } from '../src/'
 
 test.each([
   'Hey I am a very long string, this is to test if this package works with long strings, See #2',

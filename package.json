@@ -8,7 +8,7 @@
   "sideEffects": false,
   "scripts": {
     "test": "NODE_OPTIONS=\"--no-warnings --experimental-vm-modules\" jest",
-    "lint": "eslint --ext ts .",
+    "lint": "eslint .",
     "format": "prettier -w ./",
     "build": "rollup -c",
     "lint-staged": "lint-staged"
@@ -36,14 +36,14 @@
   ],
   "homepage": "https://github.com/trim21/php-serialize#readme",
   "devDependencies": {
+    "@eslint/js": "^9.11.1",
     "@jest/globals": "^29.7.0",
     "@rollup/plugin-typescript": "^11.1.6",
-    "@typescript-eslint/eslint-plugin": "^7.18.0",
-    "@typescript-eslint/parser": "^7.18.0",
-    "eslint": "^8.57.0",
-    "eslint-config-love": "^47.0.0",
+    "@types/eslint__js": "^8.42.3",
+    "eslint": "^9.11.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jest": "28.8.3",
     "eslint-plugin-n": "^17.10.2",
     "eslint-plugin-promise": "^7.1.0",
     "husky": "^9.1.5",
@@ -55,7 +55,8 @@
     "ts-jest": "^29.2.5",
     "tslib": "^2.7.0",
     "tsx": "^4.19.0",
-    "typescript": "^5.5.4"
+    "typescript": "~5.5.0",
+    "typescript-eslint": "^8.8.0"
   },
   "publishConfig": {
     "access": "public"
@@ -85,40 +86,5 @@
     "preset": "ts-jest/presets/default-esm",
     "testEnvironment": "node",
     "coverageProvider": "v8"
-  },
-  "eslintIgnore": [
-    "lib",
-    "node_modules",
-    "dist"
-  ],
-  "eslintConfig": {
-    "extends": [
-      "love",
-      "prettier"
-    ],
-    "ignorePatterns": [
-      "*.test.ts",
-      "*.config.ts",
-      "**/test/**"
-    ],
-    "rules": {
-      "camelcase": "off",
-      "prettier/prettier": "off",
-      "no-underscore-dangle": "off",
-      "no-use-before-define": "off",
-      "import/extensions": "off",
-      "@typescript-eslint/no-use-before-define": "off",
-      "@typescript-eslint/no-inferrable-types": "off",
-      "@typescript-eslint/strict-boolean-expressions": "off",
-      "@typescript-eslint/restrict-template-expressions": "off",
-      "@typescript-eslint/prefer-nullish-coalescing": "off",
-      "@typescript-eslint/explicit-function-return-type": "off",
-      "@typescript-eslint/member-delimiter-style": "off",
-      "@typescript-eslint/no-unsafe-argument": "off"
-    },
-    "parserOptions": {
-      "sourceType": "module",
-      "project": "./tsconfig.json"
-    }
   }
 }
