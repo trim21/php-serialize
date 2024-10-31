@@ -10,7 +10,7 @@
     "test": "NODE_OPTIONS=\"--no-warnings --experimental-vm-modules\" jest",
     "lint": "eslint .",
     "format": "prettier -w ./",
-    "build": "tsup src/index.ts --dts --format esm",
+    "build": "tsup src/index.ts --dts --format esm && tsup src/index.ts --dts --format cjs",
     "lint-staged": "lint-staged"
   },
   "repository": "trim21/php-serialize",
@@ -21,7 +21,7 @@
   },
   "exports": {
     ".": {
-      "types": "./dist/types/index.d.mts",
+      "require": "./dist/index.js",
       "import": "./dist/index.mjs",
       "default": "./dist/index.mjs"
     },
