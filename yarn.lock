@@ -1391,7 +1391,7 @@ __metadata:
     tsup: "npm:^8.3.5"
     tsx: "npm:^4.19.2"
     typescript: "npm:~5.6.3"
-    typescript-eslint: "npm:^8.12.1"
+    typescript-eslint: "npm:^8.12.2"
   languageName: unknown
   linkType: soft
 
@@ -6501,7 +6501,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript-eslint@npm:^8.12.1":
+"typescript-eslint@npm:^8.12.2":
   version: 8.12.2
   resolution: "typescript-eslint@npm:8.12.2"
   dependencies:
