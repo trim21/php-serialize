@@ -1,6 +1,6 @@
 {
   "name": "@trim21/php-serialize",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "PHP serialize/deserialize in Javascript",
   "type": "module",
   "types": "dist/types/index.d.ts",
