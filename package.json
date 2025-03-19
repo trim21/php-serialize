@@ -2,7 +2,7 @@
   "name": "@trim21/php-serialize",
   "version": "0.1.4",
   "description": "PHP serialize/deserialize in Javascript",
-  "main": "dist/index.cjs",
+  "type": "module",
   "types": "dist/types/index.d.ts",
   "module": "dist/index.mjs",
   "sideEffects": false,
@@ -10,7 +10,7 @@
     "test": "NODE_OPTIONS=\"--no-warnings --experimental-vm-modules\" jest",
     "lint": "eslint .",
     "format": "prettier -w ./",
-    "build": "tsup src/index.ts --keep-names --sourcemap linked --dts --format esm && tsup src/index.ts --keep-names --sourcemap linked --dts --format cjs",
+    "build": "tsup src/index.ts --keep-names --sourcemap linked --dts --format esm",
     "lint-staged": "lint-staged"
   },
   "repository": "trim21/php-serialize",
@@ -21,7 +21,6 @@
   },
   "exports": {
     ".": {
-      "require": "./dist/index.js",
       "import": "./dist/index.mjs",
       "default": "./dist/index.mjs"
     },
