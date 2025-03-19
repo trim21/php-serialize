@@ -89,7 +89,7 @@ export function parse(item: string | Buffer, givenOptions: Partial<Options> = {}
     encoding: givenOptions.encoding ?? 'utf-8',
   }
 
-  const parser = new Parser(Buffer.from(item), 0, options)
+  const parser = new Parser(Buffer.isBuffer(item) ? item : Buffer.from(item), 0, options)
 
   return deserializeItem(parser, options)
 }
