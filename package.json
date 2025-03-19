@@ -4,7 +4,7 @@
   "description": "PHP serialize/deserialize in Javascript",
   "type": "module",
   "types": "dist/types/index.d.ts",
-  "module": "dist/index.mjs",
+  "module": "dist/index.js",
   "sideEffects": false,
   "scripts": {
     "test": "NODE_OPTIONS=\"--no-warnings --experimental-vm-modules\" jest",
@@ -21,8 +21,8 @@
   },
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
-      "default": "./dist/index.mjs"
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
     },
     "./package.json": "./package.json"
   },
