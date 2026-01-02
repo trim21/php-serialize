@@ -96,7 +96,7 @@ test('it works with nested serializable classes too', () => {
 test('should failed to parse class in strict mode', () => {
   expect(() => {
     parse('C:10:"TestParent":50:{a:2:{i:0;C:4:"Test":3:{asd}i:1;O:7:"TestTwo":0:{}}}')
-  }).toThrowError(TypeError)
+  }).toThrow(TypeError)
 })
 
 test('should return to parse class with strict mode off', () => {
