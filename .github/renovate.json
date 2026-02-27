@@ -4,5 +4,7 @@
   "rangeStrategy": "bump",
   "lockFileMaintenance": {
     "automerge": true
-  }
+  },
+  "labels": ["ci:auto-merge", "dependencies"],
+  "prConcurrentLimit": 3
 }
