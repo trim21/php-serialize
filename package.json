@@ -68,7 +68,7 @@
       "eslint --fix"
     ]
   },
-  "packageManager": "pnpm@11.28.3",
+  "packageManager": "pnpm@12.8.1",
   "prettier": {
     "semi": false,
     "printWidth": 125,
